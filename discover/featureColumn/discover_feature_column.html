@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        function IsPC() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPod");
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+        if (IsPC()) {
+            window.location.href = '//www.allinmd.cn/pages/discover/discover_feature_column.html';
+        }
+    </script>
+    <title>特色栏目 - 唯医,allinmd</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="keywords" content="特色栏目，菁英课堂，大讲堂，课程，切磋，唯医,allinmd">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="dns-prefetch" href="//m.allinmd.cn"/>
+    <script src="//m.allinmd.cn/js/third-party/flexible.js"></script>
+    <!--build:css /dest/pages/discover/discover_feature_column.css-->
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/discover/discover/discover_indexV2.css">
+    <link rel="stylesheet" href="/css/vander/swiper.min.css">
+    <!--endbuild-->
+    <meta name="data-alcode" content="a2">
+</head>
+
+<body data-alcode="317" style="background: #fff;">
+<section class="al-mainInner boneClassCont">
+
+    <header class="al-indexHeader" data-alcode-mod='401'>
+        <figure class="al-indexHeaderItem">
+            <a href="//m.allinmd.cn/pages/discover/discover_index.html" class="ev_digHole" data-alcode='e45'>
+                <img src="//img50.allinmd.cn/pages/personal/arrow_back.png" alt="">
+            </a>
+        </figure>
+        <figure class="al-indexHeaderItem">
+            <h1>特色栏目</h1>
+        </figure>
+        <figure class="al-indexHeaderItem">
+        </figure>
+    </header>
+
+    <section class="discoverV2 characteristicColumn" data-alcode-mod="728">
+        <script id="table-template" type="text/x-handlebars-template">
+            {{#each data_list}}
+            <section class="goingActivity">
+                <section class="columnLeftRight">
+                    <figure class="ads"><a href="//m.allinmd.cn/pages/discover/discover_feature_detail.html?columnId={{specialId}}"><img src="{{attUrl}}"></a></figure>
+                    <aside class="textCont">
+                        <div>
+                            <a href="//m.allinmd.cn/pages/discover/discover_feature_detail.html?columnId={{specialId}}"><span>{{specialTitle}}</span></a>
+                            {{#follow followState 0}}
+                            <button class="Ev-FollowBtn" follow-id="{{specialId}}">关注</button>
+                            {{else}}
+                            <button class="Ev-FollowBtn active" follow-id="{{specialId}}">已关注</button>
+                            {{/follow}}
+                        </div>
+                        <p class="describe"><a href="//m.allinmd.cn/pages/discover/discover_feature_detail.html?columnId={{specialId}}">{{specialSubTitle}}</a></p>
+                        <p class="introduction"><a href="//m.allinmd.cn/pages/discover/discover_feature_detail.html?columnId={{specialId}}">{{ellipsis specialContent 28}}</a></p>
+                    </aside>
+                </section>
+                <aside class="goingTime">
+                    <!--<ul class="text">-->
+                        <!--<li class="timer"><i></i>{{time modifyTime}}</li>-->
+                    <!--</ul>-->
+                </aside>
+            </section>
+            {{/each}}
+            <!--<section class="lastTime">~  到底了  ~</section>-->
+        </script>
+    </section>
+    <section class="al-bottomSelectorListMask al-unfollow">
+        <section class="al-bottomSelectorListBox" data-alcode-mod="427" data-alcode-item-selector="a">
+            <section class="al-bottomSelectorList">
+                <figure class="al-bottomSelectorItem al-bottomSelectorTitle"><a href="javascript:void(0)">确定不再关注该栏目？</a></figure>
+                <figure class="al-bottomSelectorItem" id="EV-unfollowBtn"><a href="javascript:void(0)">确定</a></figure>
+            </section>
+            <section class="al-bottomSelectorList mgt">
+                <figure class="al-bottomSelectorItem" id="EV-cancelUploadImg"><a href="javascript:void(0)">取消</a></figure>
+            </section>
+        </section>
+    </section>
+</section>
+<script src="//cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script> <script>!window.jQuery&&document.write(unescape("%3Cscript src='/js/lib/jquery/jquery-2.1.0.min.js' %3E%3C/script%3E"));</script>
+<script src="//cdn.bootcss.com/jquery-json/2.4.0/jquery.json.min.js"></script><script>!$.toJSON&&document.write(unescape("%3Cscript src='/js/lib/jquery/jquery.json-2.4.js' type='text/javascript'%3E%3C/script%3E"));</script><script>!$.toJSON&&document.write(unescape("%3Cscript src='/js/lib/jquery/jquery.json-2.4.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script><script>(typeof FastClick=='undefined')&&document.write(unescape("%3Cscript src='/js/third-party/fastclick.js' type='text/javascript'%3E%3C/script%3E"));</script><script>(typeof FastClick=='undefined')&&document.write(unescape("%3Cscript src='/js/third-party/fastclick.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<!--build:js /dest/pages/discover/discover_feature_column.js-->
+<script src="/js/comm/main.js"></script>
+<script src="/js/comm/common.js"></script>
+<script src="/js/comm/comm.date.js"></script>
+<script src="/js/comm/comm.func.js"></script>
+<script src="/js/comm/log.js"></script>
+<script src="/js/comm/comm-customer.js"></script>
+<script src="/js/comm/comm-data.js"></script>
+<script src="/js/comm/comm_service.js"></script>
+<script src="/js/modules/module.user.js"></script>
+
+<script src="/js/third-party/handlebars/handlebars-v4.0.10.js"></script>
+<script src="/js/third-party/jqueryscrollpagination/js/scrollpagination.js"></script>
+<script src="/js/scene/discover/discover_feature_column.js"></script>
+<!--endbuild-->
+</body>
+
+</html>

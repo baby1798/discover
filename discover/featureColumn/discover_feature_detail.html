@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        function IsPC() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPod");
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+        if (IsPC()) {
+            var str =  location.search.substr(1);
+            window.location.href = '//www.allinmd.cn/pages/discover/discover_feature_detail.html?'+str+'';
+        }
+    </script>
+    <title>发现－你想找的,都在这里,唯医,allinmd</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="dns-prefetch" href="//m.allinmd.cn"/>
+    <script src="//m.allinmd.cn/js/third-party/flexible.js"></script>
+    <!--build:css /dest/pages/discover/discover_feature_detail.css-->
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/discover/discover/bone_class.css">
+    <!--endbuild-->
+    <meta name="data-alcode" content="a2">
+</head>
+
+<body data-alcode="318">
+    <section class="al-mainInner boneClassCont">
+        <!--<header class="al-indexHeader">-->
+            <!--<figure><img src="//img50.allinmd.cn/v3/discover/back_find.png"> </figure>-->
+            <!--<figure class="al-indexHeaderItem">-->
+                <!--<h1>骨科大讲堂</h1>-->
+            <!--</figure>-->
+            <!--<figure>-->
+                <!--<figcaption class="al-scrollShareBtn">分享</figcaption>-->
+            <!--</figure>-->
+        <!--</header>-->
+
+        <header class="fixedHeader al-indexHeader" style="display: none;">
+            <figure class="al-indexHeaderItem">
+                <a class="ev_backBtn">
+                    <img src="/images/img50/pages/personal/arrow_back.png" alt="">
+                </a>
+            </figure>
+            <figure class="al-indexHeaderItem">
+                <h1 class="seoName">骨课大讲堂</h1>
+            </figure>
+            <figure class="al-indexHeaderItem ev-checkRule">
+                <figcaption class="al-scrollShareBtn">
+                    分享
+                </figcaption>
+            </figure>
+        </header>
+
+
+        <header class="header">
+            <aside class="discoverNav">
+                <figure class="ev_backBtn"><img src="//img50.allinmd.cn/v3/discover/back_find.png"> </figure>
+                <figure></figure>
+                <figure>
+                    <figcaption class="al-scrollShareBtn">分享
+                        <!--分享提示-->
+                        <section class="shareTip" style="display: none">
+                            快邀好友一起来看精彩栏目吧
+                        </section>
+                        <!--分享提示 End-->
+                    </figcaption>
+                </figure>
+            </aside>
+        </header>
+
+            <section class="boneClass">
+            <script id="title-templaye" type="text/x-handlebars-template">
+                <aside class="title"><p>{{specialTitle}}</p><p class="Ev-FollowBtn">关注<span class="promptBoneClass" style="display: none"><img src="//img50.allinmd.cn/v3/discover/prompt02.png"></span></p></aside>
+                <aside class="viewNum"><p><span>{{browseNum}}</span><span>人浏览</span></p><p><span class="Ev-followNum">{{followNum}}</span><span>人关注</span></p></aside>
+                <aside class="introduction">{{ellipsis specialContent 68}}<a style="display: none">更多信息</a></aside>
+                <!--简介展开全部-->
+                <section class="introductionBg" style="display: none">
+                    <section class="introductionMore">
+                        <i></i>
+                        <p>{{specialContent}}</p>
+                    </section>
+                </section>
+                <!--简介展开全部 End-->
+            </script>
+            <script id="recommendDoctor-templaye" type="text/x-handlebars-template">
+                <a href="//m.allinmd.cn/pages/personal/others_contribution.html?cid={{customerId}}">
+                    <aside class="recommendDoctor" data-alcode-mod="729">
+                            <div class="personal">
+                                <div><img src="{{logoUrl}}"></div>
+                                <div><p>{{ellipsis fullName 10}}<span>推荐医师</span></p><p>{{ellipsis medicalTitle 14}}<span>{{ellipsis company 18}}</span></p></div>
+                            </div>
+                            <div class="personalList">
+                                <p>{{summary}}</p>
+                            </div>
+                    </aside>
+                </a>
+            </script>
+            <!--<script id="boneClassNav-template" type="text/x-handlebars-template">-->
+                <aside class="boneClassNav" style="display: none">
+                    <!--<aside class="boneClassNavCont">-->
+                        <!--<ul>-->
+                            <!--<li class="active" data-id="">全部</li>-->
+                            <!--{{#each this}}-->
+                            <!--<li data-id="{{treeLevel}}">{{operationName}}</li>-->
+                            <!--{{/each}}-->
+                            <!--<li class="pointer">关节</li>-->
+                            <!--<li>全部</li>-->
+                            <!--<li>全部</li>-->
+                            <!--<li>全部</li>-->
+                        <!--</ul>-->
+                    <!--</aside>-->
+                </aside>
+                <!--<aside class="tagList">-->
+                    <!--<ul class="oneColumn">&lt;!&ndash;默认高度52 overflow：hidden&ndash;&gt;-->
+                        <!--<li class="active" son-id="">全部</li>-->
+                        <!--<li>全部<span>1323</span></li>-->
+                        <!--<li>反反复复过<span>1323</span></li>-->
+                        <!--<li>嘎嘎嘎<span>1323</span></li>-->
+                        <!--<li>全部<span>1323</span></li>-->
+                        <!--<li>反反复复过<span>1323</span></li>-->
+                        <!--<li>嘎嘎嘎<span>1323</span></li>-->
+                        <!--<li>全部<span>1323</span></li>-->
+                        <!--<li>反反复复过<span>1323</span></li>-->
+                        <!--<li>嘎嘎嘎<span>1323</span></li>-->
+                        <!--<li>全部<span>1323</span></li>-->
+                        <!--<li>反反复复过<span>1323</span></li>-->
+                        <!--<li>嘎嘎嘎<span>1323</span></li><li>嘎嘎嘎<span>1323</span></li>-->
+                        <!--<li>全部<span>1323</span></li>-->
+                        <!--<li>反反复复过<span>1323</span></li>-->
+                        <!--<li>嘎嘎嘎<span>1323</span></li>-->
+                        <!--<li>全部<span>1323</span></li>-->
+                        <!--<li>反反复复过<span>1323</span></li>-->
+                        <!--<li>嘎嘎嘎<span>1323</span></li>-->
+                        <!--<li>全部<span>1323</span></li>-->
+                        <!--<li>反反复复过<span>1323</span></li>-->
+                        <!--<li>嘎嘎嘎<span>1323</span></li>-->
+                    <!--</ul>-->
+                    <!--<div class="packUp">-->
+                        <!--<p>展开</p>-->
+                    <!--</div>-->
+                    <!--展开<p>展开</p>-->
+                <!--</aside>-->
+
+                <aside class="boneScreen" style="display: none">
+                    <div class="boneScreenCont">
+                        <div class="al-terminalSortChangeItem active" flag="0">默认</div>
+                        <div class="al-terminalSortChangeItem" flag="1">最新</div>
+                    </div>
+                </aside>
+                <ul class="boneClassList" data-alcode-mod="730" style="display: none">
+                    <!--boneClassList-->
+
+                </ul>
+        </section>
+
+    </section>
+<script src="//cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script> <script>!window.jQuery&&document.write(unescape("%3Cscript src='/js/lib/jquery/jquery-2.1.0.min.js' %3E%3C/script%3E"));</script>
+<script src="//cdn.bootcss.com/jquery-json/2.4.0/jquery.json.min.js"></script><script>!$.toJSON&&document.write(unescape("%3Cscript src='/js/lib/jquery/jquery.json-2.4.js' type='text/javascript'%3E%3C/script%3E"));</script><script>!$.toJSON&&document.write(unescape("%3Cscript src='/js/lib/jquery/jquery.json-2.4.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script><script>(typeof FastClick=='undefined')&&document.write(unescape("%3Cscript src='/js/third-party/fastclick.js' type='text/javascript'%3E%3C/script%3E"));</script><script>(typeof FastClick=='undefined')&&document.write(unescape("%3Cscript src='/js/third-party/fastclick.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script src="//paas.allinmd.cn/modules/wapShare/shareAll.js"></script>
+<!--build:js /dest/pages/discover/discover_feature_detail.js-->
+<script src="/js/comm/main.js"></script>
+<script src="/js/comm/common.js"></script>
+<script src="/js/comm/comm.date.js"></script>
+<script src="/js/comm/comm.func.js"></script>
+<script src="/js/comm/log.js"></script>
+<script src="/js/comm/comm-customer.js"></script>
+<script src="/js/comm/comm-data.js"></script>
+<script src="/js/comm/comm_service.js"></script>
+<script src="/js/modules/module.user.js"></script>
+
+<script src="/js/third-party/swiper/swiper.jquery.min.js"></script>
+<script src="/js/third-party/handlebars/handlebars-v4.0.10.js"></script>
+<script src="/js/third-party/jqueryscrollpagination/js/scrollpagination.js"></script>
+<script src="/js/scene/discover/discover_feature_detail.js"></script>
+<!--endbuild-->
+</body>
+
+</html>

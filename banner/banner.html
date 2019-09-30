@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>具有可拓展性轮播</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/hotest_index.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+</head>
+<body>
+
+<!-- Banner轮播 -->
+    <section class="swiper-container al-carouselBanner" id="Ev-AlCarouselBanner">
+        <section class="swiper-wrapper Ev-banner">
+            <figure class="swiper-slide al-carouselBannerItem">
+                <a href="baidu.com">
+                    <img src="images/three.jpg" alt="isfirst">
+                </a>
+            </figure>
+            <figure class="swiper-slide al-carouselBannerItem">
+                <a href="baidu.com">
+                    <img src="images/two.jpg" alt="isfirst">
+                </a>
+            </figure>
+        </section>
+        <section class="swiper-pagination"></section>
+    </section>
+<!--结束-->
+<script src="//cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script> <script>!window.jQuery&&document.write(unescape("%3Cscript src='/js/lib/jquery/jquery-2.1.0.min.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script src="//cdn.bootcss.com/Swiper/3.3.1/js/swiper.jquery.min.js"></script><script>(typeof Swiper=='undefined')&&document.write(unescape("%3Cscript src='/js/third-party/swiper/swiper.jquery.min.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script>
+    var indexCarousel = new Swiper("#Ev-AlCarouselBanner", {
+        direction: 'horizontal',
+        loop: true,
+        autoplay: 3000,
+        speed: 500,
+        pagination: '.swiper-pagination',
+        autoplayDisableOnInteraction: false
+    })
+</script>
+</body>
+</html>

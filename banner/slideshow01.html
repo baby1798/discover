@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div#show{
+            width:700px;
+            height:280px;
+            border:1px solid #000;
+            position:relative;
+            overflow: hidden;
+        }
+        #content{
+            width:2100px;
+            height: 280px;
+            padding:0px;
+            position:absolute;
+        }
+        div#content>img {
+            width: 700px;
+            height: 280px;
+            border: 0px;
+            margin: 0px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="show">
+        <div id="content"><img src="images/one.jpg"><img src="images/two.jpg"><img src="images/three.jpg"></div>
+    </div>
+    <script type="text/javascript">
+        function marqueeimg(){
+            var ele =  document.getElementById("show");
+            ele.scrollLeft+=1;
+            if(document.getElementById("show").scrollLeft>=700){
+                document.getElementById("content").appendChild(document.getElementById("content").children[0]);
+                document.getElementById("show").scrollLeft=0;
+            }
+            i=setTimeout("marqueeimg()",10);
+        }
+        marqueeimg();
+    </script>
+    <!--<script type="text/javascript">-->
+        <!--function marqueeimg(){-->
+            <!--document.getElementById("show").scrollLeft+=15;-->
+            <!--if(document.getElementById("show").scrollLeft>=700){-->
+                <!--document.getElementById("content").appendChild(document.getElementById("content").children[0]);-->
+                <!--document.getElementById("show").scrollLeft=0;-->
+                <!--clearTimeout(i);-->
+            <!--}else{-->
+                <!--i=setTimeout("marqueeimg()",100);-->
+            <!--}-->
+        <!--}-->
+        <!--j=setInterval("marqueeimg()",1500);-->
+    <!--</script>-->
+
+
+</body>
+</html>
